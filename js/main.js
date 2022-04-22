@@ -2,9 +2,9 @@ const menuBtn = document.querySelector('.nav-menu__btn');
 const hamburger = document.querySelector('.nav-menu__hamburger');
 const nav = document.querySelector('.nav-menu__list-wrapper');
 const menuNNav = document.querySelector('.list');
-const navItems = document.querySelectorAll('.menu-nav__item');
+// const navItems = document.querySelectorAll('.menu-nav__item');
 const moreBtn = document.getElementById('more');
-const less = document.getElementById('less');
+// const less = document.getElementById('less');
 const hideSpeaker = document.querySelector('.hide-speaker');
 const body = document.querySelector('body');
 const sponsorers = document.createElement('section');
@@ -20,7 +20,7 @@ const projectData = [
   },
   {
     icon: 'images/workshop.png',
-    image: 'images/cotton--candy.jpeg', 
+    image: 'images/cotton--candy.jpeg',
     title: 'Lecture Xl',
     name: 'Speaker X',
     about: 'Have a chance to learn directly from Cotton (content rich without being scripted) the science of reverse engineering.',
@@ -28,7 +28,7 @@ const projectData = [
   },
   {
     icon: 'images/forum.png',
-    image: 'images/cotton--candy.jpeg', 
+    image: 'images/cotton--candy.jpeg',
     title: 'Lecture',
     name: 'Speaker X',
     about: 'Have a chance to learn directly from Cotton (content rich without being scripted) the science of reverse engineering.',
@@ -50,7 +50,8 @@ const projectData = [
     about: 'Have a chance to learn directly from Cotton (content rich without being scripted) the science of reverse engineering.',
     description: 'Have a chance to learn directly from Cotton (content rich without being scripted) the science of reverse engineering.',
   },
-  { icon: 'images/ignite.png',
+  {
+    icon: 'images/ignite.png',
     title: 'Lecture',
     image: 'images/cotton--candy.jpeg',
     name: 'Speaker X',
@@ -71,20 +72,15 @@ const projectData = [
 let showMenu = false;
 
 function toggleMenu() {
-  if(!showMenu) {
+  if (!showMenu) {
     hamburger.classList.add('open');
     nav.classList.add('open');
     menuNNav.classList.add('open');
-    // navItems.forEach(item => item.classList.add('open'));
-
     showMenu = true;
-
   } else {
     hamburger.classList.remove('open');
     nav.classList.remove('open');
     menuNNav.classList.remove('open');
-    // navItems.forEach(item => item.classList.remove('open'));
-
     showMenu = false;
   }
 }
@@ -93,35 +89,35 @@ menuBtn.addEventListener('click', toggleMenu);
 
 // Sticky Nav
 
-let navbar = document.querySelector('.nav-menu');
-let sticky = navbar.offsetTop;
+const navbar = document.querySelector('.nav-menu');
+const sticky = navbar.offsetTop;
 
 function stickyNav() {
   if (window.pageYOffset >= sticky) {
-    navbar.classList.add('sticky')
+    navbar.classList.add('sticky');
   } else {
     navbar.classList.remove('sticky');
   }
 }
 
-window.onscroll = function() {stickyNav()};
+window.onscroll = function () {
+  stickyNav();
+};
 
 // Program section
 
 function program() {
-
   const prgContainer = document.querySelector('.program__activities');
 
-  for (let i = 1; i < 6; i +=1) {
+  for (let i = 1; i < 6; i += 1) {
     const item = projectData[i];
     const initData = prgContainer.innerHTML;
 
-    let activityData = `<div id='${item.title}' class='program__event'>
+    const activityData = `<div id='${item.title}' class='program__event'>
                           <img src='${item.icon}' class='program__icon' alt='${item.title} image' />
                           <h3 id='${item.title}' class='program__topic'>${item.title}</h3>
                           <p id='${item.title}' class='program__desc'>${item.description}</p>
                         </div>${initData}`;
-    
     prgContainer.innerHTML = activityData;
   }
 }
@@ -129,14 +125,13 @@ function program() {
 // Speakers section
 
 function featureSpeakers() {
-
   const speakersContainer = document.querySelector('.speakers');
 
-  for (let i = 1; i < projectData.length; i +=1) {
+  for (let i = 1; i < projectData.length; i += 1) {
     const speaker = projectData[i];
     const fetch = speakersContainer.innerHTML;
-  
-    speakerData = `<div class='speakers__speaker ${i >= 3 ? 'hide-speaker' : ''}' id='${speaker.name}'>
+
+    const speakerData = `<div class='speakers__speaker ${i >= 3 ? 'hide-speaker' : ''}' id='${speaker.name}'>
                     <div class='speakers__img'><img src='${speaker.image}' alt='${speaker.name}'></div>
                     <div class='speakers__description'>
                       <h3 class='speakers__name'>${speaker.name}</h3>
@@ -145,38 +140,28 @@ function featureSpeakers() {
                       <p class='speakers__about'>${speaker.about}</p>
                     </div>
                 </div>${fetch}`;
-  speakersContainer.innerHTML = speakerData;
+    speakersContainer.innerHTML = speakerData;
   }
 }
 
-window.onload = function() {
+window.onload = function () {
   program();
   featureSpeakers();
-}
+};
 
 // Show less/more button
-
-
-// function showMore() {
-//   hideSpeaker.style.display = 'flex';
-//   less.style.display = 'flex';
-//   more.style.display = 'none';
-// }
-
-// function showMore() {
-//   hideSpeaker.style.display = 'none';
-//   less.style.display = 'none';
-//   more.style.display = 'flex';
-// }
-
-// more.addEventListener('click', showMore);
-// less.addEventListener('click', showMore);
+let i = 0;
+function showMore() {
+  if (!i) {
+    document.get
+  }
+}
 
 // Sponsers section
 
 sponsorers.className = 'sponsorers';
 sponsorers.id = 'sponsorers';
-brand = projectData[0];
+const brand = projectData[0];
 
 sponsorers.innerHTML = `<h2 class='sponsorers__header'>Sponsorers</h2> 
                           <hr class='sponsorers__line'>
