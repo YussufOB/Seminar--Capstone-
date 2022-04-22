@@ -1,37 +1,63 @@
-## Welcome to GitHub Pages
+# Seminar (Capstone Project)
 
-You can use the [editor on GitHub](https://github.com/YussufOB/Seminar--Capstone-/edit/seminar/README.md) to maintain and preview the content for your website in Markdown files.
+> This project contains home and about pages of a behance design template to imitate a prototype of annual seminar on trading.
+> The features in this project were created using javascript, html and css.
+>Javascript features (object) is also inculcated.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+## Built With
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+- HTML
+- CSS
+- Javascript
 
-```markdown
-Syntax highlighted code block
+## Live Demo (if available)
 
-# Header 1
-## Header 2
-### Header 3
+[Live Demo Link](https://yussufob.github.io/Seminar--Capstone-/)
 
-- Bulleted
-- List
+### Prerequisites
+- HTML, CSS & JAVASCRIPT
 
-1. Numbered
-2. List
+### Setup
+- linters for HTML, CSS and Javascript
+- Standard Accessibility tools (https://www.accessi.org/)
 
-**Bold** and _Italic_ and `Code` text
+### Run tests
+- Open your terminal, move to the directory where you want to clone the app (i.e cd Documents) 
+- Enter git clone git@github.com:YussufOB/Seminar-Capstone-.git
+- Change to the directory you just clone (i.e cd Seminar-Capstone-)
+- Open index.html from the list of files in your left handside
+- Right click on your opened index.html file and launch the live server to preview
+- Include any possible changes and run "git add ." 
+- Commit the changes with a descriptive message (i.e xyz features added) 
+- Push the changes to changes to the repository (i.e git push)
 
-[Link](url) and ![Image](src)
-```
+### Deployment
+- This app is deployed using Github pages (https://pages.github.com/)
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+## Author
 
-### Jekyll Themes
+👤 **Bashir Yussuf Olamilekan (Bash)**
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/YussufOB/Seminar--Capstone-/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+- GitHub: [@YussuOB](https://github.com/YussufOB)
+- Twitter: [@twitterhandle](https://twitter.com/_ybash)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/yussufOB)
 
-### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Hat tip to all feature person and the brands that their logo was used.
+- Inspiration comes from my interest in technical analysis and support for the Cotton Candy work.
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
