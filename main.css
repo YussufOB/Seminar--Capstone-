@@ -938,7 +938,6 @@ footer .desc {
     -ms-grid-columns: auto auto;
         grid-template-columns: auto auto;
     grid-column-gap: 45px;
-    background-color: #ec4252;
   }
   .speakers-wrapper .info-btn {
     display: none;
