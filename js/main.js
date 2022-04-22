@@ -5,7 +5,7 @@ const menuNNav = document.querySelector('.list');
 // const navItems = document.querySelectorAll('.menu-nav__item');
 const moreBtn = document.getElementById('more');
 // const less = document.getElementById('less');
-const hideSpeaker = document.querySelector('.hide-speaker');
+// const hideSpeaker = document.querySelector('.hide-speaker');
 const body = document.querySelector('body');
 const sponsorers = document.createElement('section');
 
@@ -124,38 +124,57 @@ function program() {
 
 // Speakers section
 
-function featureSpeakers() {
-  const speakersContainer = document.querySelector('.speakers');
+// function featureSpeakers() {
+//   const speakersContainer = document.querySelector('.speakers');
 
-  for (let i = 1; i < projectData.length; i += 1) {
-    const speaker = projectData[i];
-    const fetch = speakersContainer.innerHTML;
+//   for (let i = 1; i < projectData.length; i += 1) {
+//     const speaker = projectData[i];
+//     const fetch = speakersContainer.innerHTML;
 
-    const speakerData = `<div class='speakers__speaker ${i >= 3 ? 'hide-speaker' : ''}' id='${speaker.name}'>
-                    <div class='speakers__img'><img src='${speaker.image}' alt='${speaker.name}'></div>
-                    <div class='speakers__description'>
-                      <h3 class='speakers__name'>${speaker.name}</h3>
-                      <small class='speakers__title'>${speaker.title}</small>
-                      <hr class='speakers__hr'>
-                      <p class='speakers__about'>${speaker.about}</p>
-                    </div>
-                </div>${fetch}`;
-    speakersContainer.innerHTML = speakerData;
-  }
-}
+//     const speakerData = `<div class='speakers__speaker ${i >= 3 ? 'hide-speaker' : ''}' id='${speaker.name}'>
+//                     <div class='speakers__img'><img src='${speaker.image}' alt='${speaker.name}'></div>
+//                     <div class='speakers__description'>
+//                       <h3 class='speakers__name'>${speaker.name}</h3>
+//                       <small class='speakers__title'>${speaker.title}</small>
+//                       <hr class='speakers__hr'>
+//                       <p class='speakers__about'>${speaker.about}</p>
+//                     </div>
+//                 </div>${fetch}`;
+//     speakersContainer.innerHTML = speakerData;
+//   }
+// }
 
 window.onload = function () {
   program();
-  featureSpeakers();
+  // featureSpeakers();
 };
 
 // Show less/more button
-let i = 0;
-function showMore() {
-  if (!i) {
-    document.get
-  }
-}
+// let showMoreBtn1 = document.getElementById('more');
+// function showSpeaker() {
+//   let hiddenSpeakers = document.querySelectorAll('.hide-speaker');
+//   hiddenSpeakers.forEach((hide) => {
+//     hide.classList.remove('hide-speaker');
+//     hide.classList.add('open-speaker');
+//     showMoreBtn1.innerHTML = 'LESS <i class="fa-solid fa-angle-up arrow-icon"></i>';
+//     showMoreBtn1.id = 'less'
+//   });
+// }
+
+// let showMoreBtn2 = document.getElementById('less');
+// function hideSpeaker() {
+//   let hiddenSpeakers = document.querySelectorAll('.open-speaker');
+//   hiddenSpeakers.forEach((hide) => {
+//     hide.style.display = 'none';
+//     hide.classList.remove('open-speaker');
+//     hide.classList.add('hide-speaker');
+//     showMoreBtn2.innerHTML = 'MORE <i class="fa-solid fa-angle-up arrow-icon"></i>';
+//     showMoreBtn2.id = 'more'
+//   });
+// }
+
+// showMoreBtn1.addEventListener('click', showSpeaker);
+// showMoreBtn2.addEventListener('click', hideSpeaker);
 
 // Sponsers section
 
@@ -182,12 +201,92 @@ footer.innerHTML = `<img src='${brand.copyright}' alt='${brand.copyright}' class
                     </p>`;
 body.appendChild(footer);
 
-moreBtn.addEventListener('click', () => {
-  if (hideSpeaker.classList.contains('hide-speaker')) {
-    hideSpeaker.classList.remove('hide-speaker');
-    moreBtn.innerHTML = 'MORE <i class="fa-solid fa-angle-down arrow"></i>';
+
+
+
+const dataSpeaker = [
+  {
+    icon: 'images/workshop.png',
+    image: 'images/cotton--candy.jpeg',
+    title: 'Lecture Xl',
+    name: 'Speaker X',
+    about: 'Have a chance to learn directly from Cotton (content rich without being scripted) the science of reverse engineering.',
+    description: 'Have a chance to learn directly from Cotton (content rich without being scripted) the science of reverse engineering.',
+  },
+  {
+    icon: 'images/forum.png',
+    image: 'images/cotton--candy.jpeg',
+    title: 'Lecture',
+    name: 'Speaker X',
+    about: 'Have a chance to learn directly from Cotton (content rich without being scripted) the science of reverse engineering.',
+    description: 'Have a chance to learn directly from Cotton (content rich without being scripted) the science of reverse engineering.',
+  },
+  {
+    icon: 'images/stage.png',
+    image: 'images/cotton--candy.jpeg',
+    title: 'Lecture',
+    name: 'Speaker X',
+    about: 'Have a chance to learn directly from Cotton (content rich without being scripted) the science of reverse engineering.',
+    description: 'Have a chance to learn directly from Cotton (content rich without being scripted) the science of reverse engineering.',
+  },
+  {
+    icon: 'images/lecture.png',
+    image: 'images/cotton--candy.jpeg',
+    title: 'Lecture',
+    name: 'Speaker X',
+    about: 'Have a chance to learn directly from Cotton (content rich without being scripted) the science of reverse engineering.',
+    description: 'Have a chance to learn directly from Cotton (content rich without being scripted) the science of reverse engineering.',
+  },
+  {
+    icon: 'images/ignite.png',
+    title: 'Lecture',
+    image: 'images/cotton--candy.jpeg',
+    name: 'Speaker X',
+    about: 'Have a chance to learn directly from Cotton (content rich without being scripted) the science of reverse engineering.',
+    description: 'Have a chance to learn directly from Cotton (content rich without being scripted) the science of reverse engineering.',
+  },
+  {
+    image: 'images/cotton--candy.jpeg',
+    title: 'Lecture',
+    name: 'Speaker X',
+    about: 'Have a chance to learn directly from Cotton (content rich without being scripted) the science of reverse engineering.',
+    description: 'Have a chance to learn directly from Cotton (content rich without being scripted) the science of reverse engineering.',
+  },
+]
+
+const speakersContainer = document.querySelector('.speakers');
+const hideSpeakers = document.createElement('div');
+hideSpeakers.classList.add('hide-speakers');
+
+dataSpeaker.forEach((speaker) => {
+  const speakerX = document.createElement('div');
+  speakerX.className = 'speakers__speaker';
+  speakerX.innerHTML = `<div class="speakers__img"><img src="${speaker.image}" alt="${speaker.name}"></div>
+                        <div class="speakers__description">
+                          <h3 class="speakers__name">${speaker.name}</h3>
+                          <small class="speakers__title">${speaker.title}</small>
+                          <hr class="speakers__hr">
+                          <p class="speakers__about">${speaker.description}</p>
+                        </div>`;
+  if (dataSpeaker.indexOf(speaker) >= 2) {
+    hideSpeakers.appendChild(speakerX);
   } else {
-    hideSpeaker.classList.add('hide-speaker');
-    moreBtn.innerHTML = 'LESS <i class="fa-solid fa-angle-up arrow"></i>';
+    speakersContainer.appendChild(speakerX);
+  }
+});
+
+// append hidden speakers div to parent element
+speakersContainer.appendChild(hideSpeakers);
+
+// show more speakers event handler
+const showMoreBtn = document.getElementById('more');
+const hideDiv = document.querySelector('.hide-speakers');
+showMoreBtn.addEventListener('click', () => {
+  if (hideDiv.classList.contains('hide')) {
+    hideDiv.classList.remove('hide');
+    showMoreBtn.innerHTML = 'MORE <i class="fa-solid fa-angle-down arrow-icon"></i>';
+  } else {
+    hideDiv.classList.add('hide');
+    showMoreBtn.innerHTML = 'LESS <i class="fa-solid fa-angle-up arrow-icon"></i>';
   }
 });
