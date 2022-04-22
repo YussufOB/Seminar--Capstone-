@@ -2,10 +2,6 @@ const menuBtn = document.querySelector('.nav-menu__btn');
 const hamburger = document.querySelector('.nav-menu__hamburger');
 const nav = document.querySelector('.nav-menu__list-wrapper');
 const menuNNav = document.querySelector('.list');
-// const navItems = document.querySelectorAll('.menu-nav__item');
-const moreBtn = document.getElementById('more');
-// const less = document.getElementById('less');
-// const hideSpeaker = document.querySelector('.hide-speaker');
 const body = document.querySelector('body');
 const sponsorers = document.createElement('section');
 
@@ -122,59 +118,7 @@ function program() {
   }
 }
 
-// Speakers section
-
-// function featureSpeakers() {
-//   const speakersContainer = document.querySelector('.speakers');
-
-//   for (let i = 1; i < projectData.length; i += 1) {
-//     const speaker = projectData[i];
-//     const fetch = speakersContainer.innerHTML;
-
-//     const speakerData = `<div class='speakers__speaker ${i >= 3 ? 'hide-speaker' : ''}' id='${speaker.name}'>
-//                     <div class='speakers__img'><img src='${speaker.image}' alt='${speaker.name}'></div>
-//                     <div class='speakers__description'>
-//                       <h3 class='speakers__name'>${speaker.name}</h3>
-//                       <small class='speakers__title'>${speaker.title}</small>
-//                       <hr class='speakers__hr'>
-//                       <p class='speakers__about'>${speaker.about}</p>
-//                     </div>
-//                 </div>${fetch}`;
-//     speakersContainer.innerHTML = speakerData;
-//   }
-// }
-
-window.onload = function () {
-  program();
-  // featureSpeakers();
-};
-
-// Show less/more button
-// let showMoreBtn1 = document.getElementById('more');
-// function showSpeaker() {
-//   let hiddenSpeakers = document.querySelectorAll('.hide-speaker');
-//   hiddenSpeakers.forEach((hide) => {
-//     hide.classList.remove('hide-speaker');
-//     hide.classList.add('open-speaker');
-//     showMoreBtn1.innerHTML = 'LESS <i class="fa-solid fa-angle-up arrow-icon"></i>';
-//     showMoreBtn1.id = 'less'
-//   });
-// }
-
-// let showMoreBtn2 = document.getElementById('less');
-// function hideSpeaker() {
-//   let hiddenSpeakers = document.querySelectorAll('.open-speaker');
-//   hiddenSpeakers.forEach((hide) => {
-//     hide.style.display = 'none';
-//     hide.classList.remove('open-speaker');
-//     hide.classList.add('hide-speaker');
-//     showMoreBtn2.innerHTML = 'MORE <i class="fa-solid fa-angle-up arrow-icon"></i>';
-//     showMoreBtn2.id = 'more'
-//   });
-// }
-
-// showMoreBtn1.addEventListener('click', showSpeaker);
-// showMoreBtn2.addEventListener('click', hideSpeaker);
+window.onload = program();
 
 // Sponsers section
 
@@ -200,9 +144,6 @@ footer.innerHTML = `<img src='${brand.copyright}' alt='${brand.copyright}' class
                       <br> Some Rights Reserved.
                     </p>`;
 body.appendChild(footer);
-
-
-
 
 const dataSpeaker = [
   {
@@ -252,11 +193,11 @@ const dataSpeaker = [
     about: 'Have a chance to learn directly from Cotton (content rich without being scripted) the science of reverse engineering.',
     description: 'Have a chance to learn directly from Cotton (content rich without being scripted) the science of reverse engineering.',
   },
-]
+];
 
 const speakersContainer = document.querySelector('.speakers');
 const hideSpeakers = document.createElement('div');
-hideSpeakers.classList.add('hide-speakers');
+hideSpeakers.classList.add('speakers__hide-speakers');
 
 dataSpeaker.forEach((speaker) => {
   const speakerX = document.createElement('div');
@@ -275,12 +216,10 @@ dataSpeaker.forEach((speaker) => {
   }
 });
 
-// append hidden speakers div to parent element
 speakersContainer.appendChild(hideSpeakers);
 
-// show more speakers event handler
 const showMoreBtn = document.getElementById('more');
-const hideDiv = document.querySelector('.hide-speakers');
+const hideDiv = document.querySelector('.speakers__hide-speakers');
 showMoreBtn.addEventListener('click', () => {
   if (hideDiv.classList.contains('hide')) {
     hideDiv.classList.remove('hide');
