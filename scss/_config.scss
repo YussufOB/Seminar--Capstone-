@@ -1,0 +1,46 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+$basic-color: #d3d3d3;
+$primary-color: #272a31;
+$secondary-color: #ec5242;
+$lato-font: 'Lato', sans-serif;
+$cocogoose-font: 'COCOGOOSE', sans-serif;
+$font-weights: (
+  "regular": 400,
+  "medium": 600,
+  "bold": 900
+);
+
+@function weight($weight-name) {
+  @return map-get($font-weights, $weight-name);
+}
+
+@mixin transition-ease {
+  transition: all 0.3s ease-in-out;
+}
+
+@mixin media-xs {
+  @media screen and (min-width: 450px) {
+    @content;
+  }
+}
+
+@mixin media-md {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin container($direction) {
+  width: 100vw;
+  padding: 3rem 1.5rem;
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+}

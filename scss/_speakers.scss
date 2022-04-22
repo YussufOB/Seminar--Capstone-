@@ -1,0 +1,94 @@
+.speakers-wrapper {
+  @include container(column);
+
+  .wrapper__title {
+    color: #272a31;
+    font-size: 1.5rem;
+  }
+
+  .wrapper__line {
+    width: 40px;
+    margin-top: 0.75rem;
+    margin-bottom: 3rem;
+    color: #ff4f38;
+    border: 2px solid #ff4f38;
+  }
+
+  .speakers {
+
+    &__speaker {
+      display: flex;
+      min-height: 160px;
+      gap: 35px;
+      margin-bottom: 3rem;
+    }
+
+    .hide-speaker {
+      display: none;
+    }
+
+    &__img {
+      position: relative;
+      background-image: url('/images/ta-logo.png');
+      background-size: 70px 70px;
+      background-repeat: no-repeat;
+    }
+
+    img {
+      width: 160px;
+      height: 150px;
+      padding: 15% 0 0 15%;
+      object-fit: cover;
+    }
+
+    &__name {
+      padding: 0.5rem 0;
+      font-size: 1.25rem;
+      color: #272a31;
+      font-weight: weight(bold);
+    }
+
+    &__title {
+      font-size: 1rem;
+      color: #ec5242;
+      font-style: italic;
+      font-weight: weight(medium);
+    }
+
+    &__hr {
+      width: 25px;
+      margin: 0.75rem 0;
+      border: 0.5px solid #d3d3d3;
+    }
+
+    &__about {
+      color: #595959;
+      font-size: 1rem;
+      font-weight: weight(medium);
+    }
+  }
+
+  .info-btn {
+    @include transition-ease;
+    font-weight: weight(medium);
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid #595959;
+    color: #595959;
+    font-size: 1rem;
+    border-radius: 4px;
+    padding: 1rem 0;
+    width: 100%;
+
+    .arrow {
+      color: #ec5242;
+      margin-left: 5px;
+    }
+  }
+
+  .info-btn:hover {
+    background-color: #ec5242;
+    border: none;
+    color: #d3d3d3;
+  }
+}

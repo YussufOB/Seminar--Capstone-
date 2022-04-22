@@ -1,0 +1,31 @@
+.sponsorers {
+  @include container(column);
+  background-color: #414246;
+
+  &__header {
+    color: #fbfefb;
+  }
+
+  &__logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 50px;
+    row-gap: 20px;
+  }
+
+  &__logo {
+    width: 200px;
+    height: 100px;
+    object-fit: contain;
+  }
+
+  &__line {
+    width: 40px;
+    margin-top: 0.75rem;
+    margin-bottom: 3rem;
+    color: #ff4f38;
+    border: 2px solid #ff4f38;
+  }
+}
