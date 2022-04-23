@@ -795,6 +795,20 @@ footer .desc {
     gap: 70px;
   }
 
+  #campaign {
+    margin-right: 20px;
+    margin-left: 10px;
+    color: #ec5242;
+    font-weight: 600;
+    padding: 10px;
+    top: -15px;
+    right: -65px;
+    position: absolute;
+    border: 2px solid #ec5242;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+  }
+  
   .nav-menu__list-wrapper .list .about {
     color: #ec5242;
   }

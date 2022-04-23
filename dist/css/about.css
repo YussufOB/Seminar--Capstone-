@@ -522,7 +522,6 @@ footer .desc {
 .shows__show {
   width: 100%;
   height: 230px;
-  /* background-image: url("/images/past-event-1.jpg"); */
   background-size: cover;
   background-repeat: no-repeat;
   display: -webkit-box;
@@ -545,27 +544,6 @@ footer .desc {
   width: 300px;
   height: 230px;
 }
-
-/* #show-1 {
-  background-image: url("/images/past-event-1.jpg");
-}
-
-#show-2 {
-  background-image: url("/images/past-event-2.jpg");
-} */
-
-/* .shows__show span:nth-of-type(1) {
-  font-size: 40px;
-  color: #fff;
-  font-weight: 700;
-}
-
-.shows__show span:nth-of-type(2) {
-  font-size: 20px;
-  color: #d3d3d3;
-  font-weight: 600;
-  letter-spacing: 0.2px;
-} */
 
 .anw {
   position: relative;
@@ -626,6 +604,20 @@ footer .desc {
     bottom: 0;
     right: 0;
     gap: 70px;
+  }
+
+  #campaign {
+    margin-right: 20px;
+    margin-left: 10px;
+    color: #ec5242;
+    font-weight: 600;
+    padding: 10px;
+    top: -15px;
+    right: -65px;
+    position: absolute;
+    border: 2px solid #ec5242;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
   }
 
   .nav-menu__list-wrapper .list .about {
