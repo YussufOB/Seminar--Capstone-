@@ -55,6 +55,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
+- Credit to Cindy Shin in Behance for the Original design idea.
 - Hat tip to all feature person and the brands that their logo was used.
 - Inspiration comes from my interest in technical analysis and support for the Cotton Candy work.
 
