@@ -11,9 +11,10 @@
 - CSS
 - Javascript
 
-## Live Demo (if available)
+## Live Demo Links
 
 [Live Demo Link](https://yussufob.github.io/Seminar--Capstone-/)
+[Live Demo Link](https://www.loom.com/share/b3fbdb57749f41e786f97740d492b5cc)
 
 ### Prerequisites
 - HTML, CSS & JAVASCRIPT
