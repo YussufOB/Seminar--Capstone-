@@ -1,10 +1,3 @@
-// const menuBtn = document.querySelector('.nav-menu__btn');
-// const hamburger = document.querySelector('.nav-menu__hamburger');
-// const nav = document.querySelector('.nav-menu__list-wrapper');
-// const menuNNav = document.querySelector('.list');
-// const body = document.querySelector('body');
-// const sponsorers = document.createElement('section');
-
 const projectData = [
   {
     icon: 'images/workshop.png',
@@ -47,6 +40,7 @@ const projectData = [
     description: 'Have a chance to learn directly from Cotton (content rich without being scripted) the science of reverse engineering.',
   },
   {
+    icon: 'images/workshop.png',
     image: 'images/cotton--candy.jpeg',
     title: 'Lecture',
     name: 'Speaker X',
@@ -54,43 +48,6 @@ const projectData = [
     description: 'Have a chance to learn directly from Cotton (content rich without being scripted) the science of reverse engineering.',
   },
 ];
-
-// // Hamburger section
-
-// let showMenu = false;
-
-// function toggleMenu() {
-//   if (!showMenu) {
-//     hamburger.classList.add('open');
-//     nav.classList.add('open');
-//     menuNNav.classList.add('open');
-//     showMenu = true;
-//   } else {
-//     hamburger.classList.remove('open');
-//     nav.classList.remove('open');
-//     menuNNav.classList.remove('open');
-//     showMenu = false;
-//   }
-// }
-
-// menuBtn.addEventListener('click', toggleMenu);
-
-// // Sticky Nav
-
-// const navbar = document.querySelector('.nav-menu');
-// const sticky = navbar.offsetTop;
-
-// function stickyNav() {
-//   if (window.pageYOffset >= sticky) {
-//     navbar.classList.add('sticky');
-//   } else {
-//     navbar.classList.remove('sticky');
-//   }
-// }
-
-// window.onscroll = function () {
-//   stickyNav();
-// };
 
 // Program section
 
@@ -154,6 +111,7 @@ const dataSpeaker = [
     description: 'Have a chance to learn directly from Cotton (content rich without being scripted) the science of reverse engineering.',
   },
   {
+    icon: 'images/ignite.png',
     image: 'images/cotton--candy.jpeg',
     title: 'Lecture',
     name: 'Speaker X',
@@ -196,11 +154,3 @@ showMoreBtn.addEventListener('click', () => {
     showMoreBtn.innerHTML = 'LESS <i class="fa-solid fa-angle-up arrow-icon"></i>';
   }
 });
-
-// // Footer section
-// const footer = document.createElement('footer');
-// footer.innerHTML = `<img src='${brand.copyright}' alt='${brand.copyright}' class='copyright'>
-//                     <p class='desc'>2022 Annual Trading Seminar, Twitch Tv.
-//                       <br> Some Rights Reserved.
-//                     </p>`;
-// body.appendChild(footer);
