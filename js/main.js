@@ -224,8 +224,8 @@ showMoreBtn.addEventListener('click', () => {
 
 // // Footer section
 // const footer = document.createElement('footer');
-// footer.innerHTML = `<img src='${brand.copyright}' alt='${brand.copyright}' class='copyright'> 
-//                     <p class='desc'>2022 Annual Trading Seminar, Twitch Tv. 
+// footer.innerHTML = `<img src='${brand.copyright}' alt='${brand.copyright}' class='copyright'>
+//                     <p class='desc'>2022 Annual Trading Seminar, Twitch Tv.
 //                       <br> Some Rights Reserved.
 //                     </p>`;
 // body.appendChild(footer);
